@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="520.0" prefWidth="629.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainStage">
+   <children>
+      <Accordion prefHeight="469.0" prefWidth="666.0" AnchorPane.bottomAnchor="51.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <panes>
+          <TitledPane animated="false" text="Income Sources">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="142.0" prefWidth="322.0">
+                     <children>
+                        <Button layoutX="561.0" layoutY="185.0" mnemonicParsing="false" text="Button" />
+                        <Button layoutX="561.0" layoutY="113.0" mnemonicParsing="false" text="Button" />
+                        <ScrollPane layoutX="14.0" layoutY="7.0" prefHeight="302.0" prefWidth="532.0">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="311.0" prefWidth="532.0">
+                                 <children>
+                                    <ListView prefHeight="311.0" prefWidth="532.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </ScrollPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+          </TitledPane>
+          <TitledPane animated="false" text="Expenses">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="142.0" prefWidth="322.0">
+                     <children>
+                        <Button layoutX="561.0" layoutY="185.0" mnemonicParsing="false" text="Button" />
+                        <Button layoutX="561.0" layoutY="113.0" mnemonicParsing="false" text="Button" />
+                        <ScrollPane layoutX="14.0" layoutY="7.0" prefHeight="302.0" prefWidth="532.0">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="311.0" prefWidth="532.0">
+                                 <children>
+                                    <ListView prefHeight="311.0" prefWidth="532.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </ScrollPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+          </TitledPane>
+            <TitledPane animated="false" layoutX="10.0" layoutY="55.0" text="Subscriptions">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="142.0" prefWidth="322.0">
+                     <children>
+                        <Button layoutX="561.0" layoutY="185.0" mnemonicParsing="false" text="Button" />
+                        <Button layoutX="561.0" layoutY="113.0" mnemonicParsing="false" text="Button" />
+                        <ScrollPane layoutX="14.0" layoutY="7.0" prefHeight="302.0" prefWidth="532.0">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="311.0" prefWidth="532.0">
+                                 <children>
+                                    <ListView prefHeight="311.0" prefWidth="532.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </ScrollPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </TitledPane>
+          <TitledPane animated="false" text="Deposits">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="142.0" prefWidth="322.0">
+                     <children>
+                        <Button layoutX="561.0" layoutY="185.0" mnemonicParsing="false" text="Button" />
+                        <Button layoutX="561.0" layoutY="113.0" mnemonicParsing="false" text="Button" />
+                        <ScrollPane layoutX="14.0" layoutY="7.0" prefHeight="302.0" prefWidth="532.0">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="311.0" prefWidth="532.0">
+                                 <children>
+                                    <ListView prefHeight="311.0" prefWidth="532.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </ScrollPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+          </TitledPane>
+            <TitledPane animated="false" layoutX="10.0" layoutY="100.0" text="Withdrawals">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="142.0" prefWidth="322.0">
+                     <children>
+                        <Button layoutX="561.0" layoutY="185.0" mnemonicParsing="false" text="Button" />
+                        <Button layoutX="561.0" layoutY="113.0" mnemonicParsing="false" text="Button" />
+                        <ScrollPane layoutX="14.0" layoutY="7.0" prefHeight="302.0" prefWidth="532.0">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="311.0" prefWidth="532.0">
+                                 <children>
+                                    <ListView prefHeight="311.0" prefWidth="532.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </ScrollPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </TitledPane>
+            <TitledPane animated="false" layoutX="10.0" layoutY="365.0" prefHeight="379.0" prefWidth="669.0" text="Checking and Savings Balances">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="142.0" prefWidth="322.0">
+                     <children>
+                        <Button layoutX="561.0" layoutY="185.0" mnemonicParsing="false" text="Button" />
+                        <Button layoutX="561.0" layoutY="113.0" mnemonicParsing="false" text="Button" />
+                        <ScrollPane layoutX="14.0" layoutY="7.0" prefHeight="302.0" prefWidth="532.0">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="311.0" prefWidth="532.0">
+                                 <children>
+                                    <ListView prefHeight="311.0" prefWidth="532.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </ScrollPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </TitledPane>
+        </panes>
+      </Accordion>
+      <Label layoutX="21.0" layoutY="467.0" prefHeight="53.0" prefWidth="197.0" text="Monthly Balance:">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <Label layoutX="232.0" layoutY="471.0" text="Balance">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

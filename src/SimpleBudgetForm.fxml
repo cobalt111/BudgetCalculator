@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
-<GridPane xmlns:fx="http://javafx.com/fxml/1" alignment="CENTER" prefHeight="400.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/10.0.1" fx:controller="MainStage">
+
+<GridPane alignment="CENTER" prefHeight="400.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="BudgetController">
    <columnConstraints>
       <ColumnConstraints hgrow="SOMETIMES" maxWidth="161.5" minWidth="10.0" prefWidth="151.5" />
-      <ColumnConstraints hgrow="SOMETIMES" maxWidth="179.0" minWidth="10.0" prefWidth="148.0" />
       <ColumnConstraints hgrow="SOMETIMES" maxWidth="179.0" minWidth="10.0" prefWidth="148.0" />
       <ColumnConstraints hgrow="SOMETIMES" maxWidth="179.0" minWidth="10.0" prefWidth="148.0" />
    </columnConstraints>
@@ -38,17 +41,11 @@
       </Label>
       <Label fx:id="withdrawalsLabel" text="Withdrawals" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
       <Label fx:id="withdrawalsBalance" text="Label" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
-      <Button fx:id="checkingAndSavingsAddButton" mnemonicParsing="false" onAction="#handleCheckingAndSavingsAddButtonClicked" text="Add" GridPane.columnIndex="2" GridPane.halignment="CENTER" />
-      <Button fx:id="checkingAndSavingsRemoveButton" mnemonicParsing="false" onAction="#handleCheckingAndSavingsRemoveButtonClicked" text="Remove" GridPane.columnIndex="3" GridPane.halignment="CENTER" />
-      <Button fx:id="incomeSourcesAddButton" mnemonicParsing="false" onAction="#handleIncomeSourcesAddButtonClicked" text="Add" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-      <Button fx:id="incomeSourcesRemoveButton" mnemonicParsing="false" onAction="#handleIncomeSourcesRemoveButtonClicked" text="Remove" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-      <Button fx:id="expensesAddButton" mnemonicParsing="false" onAction="#handleExpensesAddButtonClicked" text="Add" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
-      <Button fx:id="expensesRemoveButton" mnemonicParsing="false" onAction="#handleExpensesRemoveButtonClicked" text="Remove" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
-      <Button fx:id="subscriptionsAddButton" mnemonicParsing="false" onAction="#handleSubscriptionsAddButtonClicked" text="Add" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
-      <Button fx:id="subscriptionsRemoveButton" mnemonicParsing="false" onAction="#handleSubscriptionsRemoveButtonClicked" text="Remove" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
-      <Button fx:id="depositsAddButton" mnemonicParsing="false" onAction="#handleDepositsAddButtonClicked" text="Add" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
-      <Button fx:id="depositsRemoveButton" mnemonicParsing="false" onAction="#handleDepositsRemoveButtonClicked" text="Remove" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
-      <Button fx:id="withdrawalsAddButton" mnemonicParsing="false" onAction="#handleWithdrawalsAddButtonClicked" text="Add" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
-      <Button fx:id="withdrawalsRemoveButton" mnemonicParsing="false" onAction="#handleWithdrawalsRemoveButtonClicked" text="Remove" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
+      <Button fx:id="checkingAndSavingsAddButton" mnemonicParsing="false" onAction="#handleCheckingAndSavingsAddButtonClicked" text="Modify" GridPane.columnIndex="2" GridPane.halignment="CENTER" />
+      <Button fx:id="incomeSourcesAddButton" mnemonicParsing="false" onAction="#handleIncomeSourcesAddButtonClicked" text="Modify" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+      <Button fx:id="expensesAddButton" mnemonicParsing="false" onAction="#handleExpensesAddButtonClicked" text="Modify" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+      <Button fx:id="subscriptionsAddButton" mnemonicParsing="false" onAction="#handleSubscriptionsAddButtonClicked" text="Modify" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+      <Button fx:id="depositsAddButton" mnemonicParsing="false" onAction="#handleDepositsAddButtonClicked" text="Modify" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+      <Button fx:id="withdrawalsAddButton" mnemonicParsing="false" onAction="#handleWithdrawalsAddButtonClicked" text="Modify" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
    </children>
 </GridPane>

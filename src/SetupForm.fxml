@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<GridPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="394.0" prefWidth="299.0" xmlns="http://javafx.com/javafx/10.0.1" fx:controller="MainStage">
+   <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="154.0" minWidth="10.0" prefWidth="152.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="191.0" minWidth="10.0" prefWidth="147.0" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints maxHeight="68.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="68.0" minHeight="10.0" prefHeight="52.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="56.0" minHeight="9.0" prefHeight="51.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="54.0" minHeight="0.0" prefHeight="51.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="53.0" minHeight="10.0" prefHeight="46.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="84.0" minHeight="8.0" prefHeight="49.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="93.0" minHeight="5.0" prefHeight="46.0" vgrow="SOMETIMES" />
+   </rowConstraints>
+   <children>
+      <Label fx:id="checkingAndSavingsSetupLabel" prefHeight="34.0" prefWidth="137.0" text="Current Checking and Savings" wrapText="true" GridPane.halignment="CENTER" />
+      <Label fx:id="incomeSourcesSetupLabel" text="Income Sources" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+      <Label fx:id="expensesSetupLabel" text="Expenses" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+      <Label fx:id="subscriptionsSetupLabel" text="Subscriptions" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+      <Label fx:id="depositsSetupLabel" text="Deposits" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+      <Label fx:id="withdrawalsSetupLabel" text="Withdrawals" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
+      <TextField fx:id="checkingAndSavingsSetupBalance" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="120.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
+      <TextField fx:id="incomeSourcesSetupBalance" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="120.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+      <TextField fx:id="expensesSetupBalance" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="120.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+      <TextField fx:id="subscriptionsSetupBalance" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="120.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+      <TextField fx:id="depositsSetupBalance" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="120.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+      <TextField fx:id="withdrawalsSetupBalance" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="120.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
+      <Button fx:id="submitSetupButton" mnemonicParsing="false" onAction="#handleSetupSubmitButtonClicked" text="Submit" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="6" />
+   </children>
+</GridPane>

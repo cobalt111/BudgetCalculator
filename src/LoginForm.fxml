@@ -17,5 +17,6 @@
       <TextField id="usernameField" fx:id="usernameField" layoutX="177.0" layoutY="139.0" prefHeight="45.0" prefWidth="247.0" promptText="username" />
       <PasswordField id="passwordField" fx:id="passwordField" layoutX="177.0" layoutY="200.0" prefHeight="45.0" prefWidth="247.0" promptText="password" />
       <Button id="loginButton" fx:id="loginButton" alignment="CENTER" layoutX="260.0" layoutY="261.0" mnemonicParsing="false" onAction="#handleLoginButtonClicked" text="Login" textAlignment="CENTER" />
+      <Button fx:id="registerButton" layoutX="248.0" layoutY="325.0" mnemonicParsing="false" onAction="#handleRegisterClicked" text="Register" />
    </children>
 </AnchorPane>

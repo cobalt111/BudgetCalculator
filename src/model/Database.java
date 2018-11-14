@@ -1,8 +1,6 @@
 package model;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.prefs.Preferences;
 
 public class Database {
@@ -52,20 +50,62 @@ public class Database {
     }
 
     //region Login
-    public boolean credentialsAreValid(User user) {
-
+    public String credentialsAreValid(User user) {
+        Connection connection = getConnection();
+        String result = null;
+        try {
+            CallableStatement statement = connection.prepareCall("{ ? = call verifyUser(?, ?)}");
+            statement.registerOutParameter(1, Types.VARCHAR);
+            statement.setString(2, user.getUsername());
+            statement.setString(3, user.getPassword());
+            statement.execute();
+            result = statement.getString(1);
+        }
+        catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return result;
     }
 
-    public void setLoginCredentials(User user) {
+    public void setCredentials(User user) {
         this.user = user;
-        private User getLoginInfo() {
-            User user = ;
+    }
 
-
-
-            return user;
+    public void setupUser(int[] amounts) {
+        Connection connection = getConnection();
+        try {
+            CallableStatement statement = connection.prepareCall("{call setupUser(?, ?, ?, ?, ?, ?, ?, ?)}");
+            statement.setString(1, user.getUsername());
+            statement.setString(2, user.getPassword());
+            statement.setInt(3, amounts[0]);
+            statement.setInt(4, amounts[1]);
+            statement.setInt(5, amounts[2]);
+            statement.setInt(6, amounts[3]);
+            statement.setInt(7, amounts[4]);
+            statement.setInt(8, amounts[5]);
+            statement.execute();
+        }
+        catch (SQLException e) {
+            e.printStackTrace();
         }
     }
+
+//    private User getLoginInfo() {
+//        Connection connection = getConnection();
+//
+//        try {
+//            CallableStatement statement = connection.prepareCall("{ ? call = verifyUser(?, ?)}");
+//            statement.registerOutParameter(1, );
+//        }
+//        catch (SQLException e) {
+//            e.printStackTrace();
+//        }
+//        User user = ;
+//
+//
+//
+//        return user;
+//    }
     //endregion
 
 

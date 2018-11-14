@@ -8,12 +8,25 @@ import javafx.scene.control.*;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import model.Database;
+import model.User;
 
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
 public class MainStage extends Application implements Initializable {
+
+    public User user;
+
+    @FXML public Button registerButton;
+
+    @FXML
+    public void handleRegisterClicked() {
+        database = Database.getDatabaseInstance();
+        user = new User(usernameField.getText(), passwordField.getText());
+        database.setCredentials(user);
+        openSetup();
+    }
 
     //region Login Form
     @FXML public TextField usernameField;
@@ -51,18 +64,18 @@ public class MainStage extends Application implements Initializable {
     @FXML public Label depositsBalance;
     @FXML public Label withdrawalsBalance;
     @FXML public Label monthlyBalance;
-    @FXML public Label checkingAndSavingsAddButton;
-    @FXML public Label incomeSourcesAddButton;
-    @FXML public Label expensesAddButton;
-    @FXML public Label subscriptionsAddButton;
-    @FXML public Label depositsAddButton;
-    @FXML public Label withdrawalsAddButton;
-    @FXML public Label checkingAndSavingsRemoveButton;
-    @FXML public Label incomeSourcesRemoveButton;
-    @FXML public Label expensesRemoveButton;
-    @FXML public Label subscriptionsRemoveButton;
-    @FXML public Label depositsRemoveButton;
-    @FXML public Label withdrawalsRemoveButton;
+    @FXML public Button checkingAndSavingsAddButton;
+    @FXML public Button incomeSourcesAddButton;
+    @FXML public Button expensesAddButton;
+    @FXML public Button subscriptionsAddButton;
+    @FXML public Button depositsAddButton;
+    @FXML public Button withdrawalsAddButton;
+    @FXML public Button checkingAndSavingsRemoveButton;
+    @FXML public Button incomeSourcesRemoveButton;
+    @FXML public Button expensesRemoveButton;
+    @FXML public Button subscriptionsRemoveButton;
+    @FXML public Button depositsRemoveButton;
+    @FXML public Button withdrawalsRemoveButton;
     //region Change Amount Form
     @FXML public Label enterDollarAmountLabel;
     @FXML public TextField submissionAmountField;
@@ -193,10 +206,10 @@ public class MainStage extends Application implements Initializable {
     }
 
     public void onLoginClicked() {
-        String username = usernameField.getText();
-        String password = passwordField.getText();
-        if (database.credentialsAreValid(username, password)) {
-            database.setLoginCredentials(username, password);
+        User user = new User(usernameField.getText(), passwordField.getText());
+        database = Database.getDatabaseInstance();
+        if (database.credentialsAreValid(user).equals("TRUE")) {
+            database.setCredentials(user);
             openBudgetManager();
         }
 //        else showInvalidPasswordAlert();
@@ -205,7 +218,14 @@ public class MainStage extends Application implements Initializable {
     }
 
     public void onSetupSubmit() {
-
+        database = Database.getDatabaseInstance();
+        int[] amounts = {Integer.parseInt(checkingAndSavingsSetupBalance.getText())*100,
+                Integer.parseInt(incomeSourcesSetupBalance.getText())*100,
+                Integer.parseInt(expensesSetupBalance.getText())*100,
+                Integer.parseInt(subscriptionsSetupBalance.getText())*100,
+                Integer.parseInt(depositsSetupBalance.getText())*100,
+                Integer.parseInt(withdrawalsSetupBalance.getText())*100};
+        database.setupUser(amounts);
     }
 
     public void onSubmitChange() {
@@ -242,35 +262,7 @@ public class MainStage extends Application implements Initializable {
             e.printStackTrace();
         }
 
-        final String zeroDollars = "$0.00";
 
-        checkingAndSavingsBalance.setText(zeroDollars);
-        incomeSourcesBalance.setText(zeroDollars);
-        expensesBalance.setText(zeroDollars);
-        subscriptionsBalance.setText(zeroDollars);
-        depositsBalance.setText(zeroDollars);
-        withdrawalsBalance.setText(zeroDollars);
-
-//        ObservableList<ListItem> incomeSources = FXCollections.observableArrayList(),
-//            deposits = FXCollections.observableArrayList(),
-//            withdrawals = FXCollections.observableArrayList(),
-//            subscriptions = FXCollections.observableArrayList(),
-//            checkingAndSavingsAccounts = FXCollections.observableArrayList(),
-//            expenses = FXCollections.observableArrayList();
-//
-//        ListView<ListItem> incomeSourcesView = new ListView<>(incomeSources),
-//            depositsView = new ListView<>(deposits),
-//            withdrawalsView = new ListView<>(withdrawals),
-//            subscriptionsView = new ListView<>(subscriptions),
-//            checkingSavingsView = new ListView<>(checkingAndSavingsAccounts),
-//            expensesView = new ListView<>(expenses);
-//
-//        incomeSourcesView.setCellFactory(param -> new ManagerListCell());
-//        depositsView.setCellFactory(param -> new ManagerListCell());
-//        withdrawalsView.setCellFactory(param -> new ManagerListCell());
-//        subscriptionsView.setCellFactory(param -> new ManagerListCell());
-//        checkingSavingsView.setCellFactory(param -> new ManagerListCell());
-//        expensesView.setCellFactory(param -> new ManagerListCell());
 
         Stage managerStage = new Stage();
         managerStage.initModality(Modality.APPLICATION_MODAL);
